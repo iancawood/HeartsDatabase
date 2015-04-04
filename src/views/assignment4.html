@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SE3309 Assignment 4</title>
+		<link rel='stylesheet', href='/stylesheets/style.css'></link>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+		<script type='text/javascript' src='/javascripts/script.js'></script>
+	</head>
+	<body>
+		<h1>WELCOME TO MY SE3309 ASSIGNMENT 4!</h1>
+		<p>No PHP included, guaranteed!™</p>
+
+		<!-- CREATE PLAYER -->
+		<div>
+			<h3>CREATE A PLAYER</h3>
+		<div>	
+		<div>
+			<input type="text" id="username" placeholder="Username">
+			<input type="text" id="passphrase" placeholder="Passphrase">
+			<button type="button" id="createPlayerButton">Create Player</button>
+		</div>
+
+		<br>
+
+		<!-- CREATE GAME -->
+		<div>
+			<h3>CREATE A GAME</h3>
+		<div>	
+		<div>
+			<select id="playerCombo1"></select>
+			<select id="playerCombo2"></select>
+			<select id="playerCombo3"></select>
+			<select id="playerCombo4"></select>
+			<!--<button type="button" id="populatePlayersButton">Populate Players</button>-->
+			<button type="button" id="createGameButton">Create Hearts Game</button>
+		</div>
+
+		<br>
+
+		<!-- CREATE ROUND -->
+		<div>
+			<h3>CREATE A ROUND</h3>
+		<div>	
+		<div>
+			<input type="text" id="score1" size="9" placeholder="Player 1 Score">
+			<input type="text" id="score2" size="9" placeholder="Player 2 Score">
+			<input type="text" id="score3" size="9" placeholder="Player 3 Score">
+			<input type="text" id="score4" size="9" placeholder="Player 4 Score">
+			<select id="queenCombo"></select>
+			<button type="button" id="createRoundButton">Create Hearts Round</button>
+		</div>
+
+		<br>
+
+		<!-- Game Display -->
+		<div>
+			<h3>CURRENT SCORES</h3>
+		<div>		
+		<div class="CSSTableGenerator">
+			<table id="display">
+				<thead id="displayHead">
+					<th>Player 1 (0)</th>
+					<th>Player 2 (0)</th>
+					<th>Player 3 (0)</th>
+					<th>Player 4 (0)</th>
+				</thead>
+				<tbody id="displayBody">
+				</tbody>
+			</table>
+		<div>
+
+		<br>
+
+		<!-- PLAYER STATISTICS -->
+		<div>
+			<h3>PLAYER STATISTICS</h3>
+		<div>	
+		<div>
+			<select id="playerStatsCombo"></select>
+			<select id="statsOptionCombo">
+			  <option value="numWins">Number of Wins For Player</option>
+			  <option value="numGames">Number of Games For Player</option>
+			  <option value="avgQueens">Average Number of Queens Per Game For Player</option>
+			  <option value="chanceShoot">Chance of ANYONE Shooting The Moon Per Game</option>
+			  <option value="playerHistory">Player Score History</option>
+			</select>
+			<button type="button" id="generateStatsButton">Generate Statistics</button>
+			<input type="text" id="statsDisplay" size="10" placeholder="Stats here...">
+		</div>
+
+		<br>
+
+		<!-- PLAYER HISTORY -->
+		<div>
+			<h3>PLAYER HISTORY</h3>
+		<div>	
+		<div class="CSSTableGenerator" >
+			<table id="history">
+				<thead id="historyHead">
+					<th>Game ID</th>
+					<th>Username</th>
+					<th>Final Score</th>
+				</thead>
+				<tbody id="historyBody">
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

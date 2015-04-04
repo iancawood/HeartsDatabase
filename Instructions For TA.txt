@@ -1,0 +1,69 @@
+Purpose: 
+This text file will outline how to use this application, how to make useful data 
+and other useful things that will make marking this project easier.
+
+Background: 
+We choose to use a node server with a mysql module installed in it. Most of the logic 
+is done on the client side. If we wanted to make a query to the database a make an post request to 
+the route "/query" and pass it the query. This request will return me the results from the table 
+and we do stuff with it on the client side. The server can be started by using the "npm start" command
+in the projects root directory. Then open "localhost:3000" in chrome. (I only tested with chrome.)
+
+Note: This application only implements hearts games and does not include anything related to euchre.
+
+Note: There isn't a lot of error checking. Refresh the page if something goes wrong.
+
+Useful Files:
+/src/public/javascripts/script.js - This file is where almost all of the logic is.
+/src/views/assignment4.html - This file has all of my html.
+/src/routes/index.js - This is the file that receives AJAX calls and interacts with the mySQL server.
+
+How to use this project:
+1) Make users
+This can be done whenever. Just add a string to the username and passphrase field and just click create
+user. Simple.
+
+2) Make a game and rounds
+NOTE: These events MUST be done in order. (You can't create rounds to )
+
+Start by choosing 4 players to go into the new game. The can NOT BE DUPLICATE PLAYERS in a game. 
+Click Create Hearts Game.
+
+When creating a round, input 4 integers that SUM TO 26. In the dropdown, select a player that has received
+at least 13 points. This dropdown indicates which player receives the queen of spades. Keep doing this until
+a player has received at least 100 points. The app will prompt you that the game has been completed.
+
+Note: Once a game is completed, refresh the page to make a new game.
+
+3) Generate User Stats
+Select the player that you want stats about. Select the type of stat you want. Click generate statistics.
+The stats will display now.
+
+Recommend data entry:
+Make 4 players...
+
+Game 1:
+Player 1 	Player 2 	Player 3 	Player 4 	Queen
+20			6			0			0			Player 1
+20			6			0			0			Player 1
+20			6			0			0			Player 1
+10 			13			3 			0 			Player 2
+10 			13			3 			0 			Player 2
+10 			13			3 			0 			Player 2
+10 			13			3 			0 			Player 2
+Winner = player 4
+
+Game 2:
+Player 1 	Player 2 	Player 3 	Player 4 	Queen
+0			26			26			26			Player 1
+0			26			26			26			Player 1
+13			0			10			3			Player 1
+0			13			10			3			Player 2
+0			13			10			3			Player 2
+0			13			10			3			Player 2
+0			13			10			3			Player 2
+Winner = player 1
+
+Every query will now return non-trivial results.
+
+See SQLStatements.sql for details on queries.
